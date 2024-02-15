@@ -76,5 +76,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.i(Tag,"Estoy en OnDestroy");
+        nombreUsuario.setText(nombreUsuario.getText().toString()+"estoy en onDestroy");
     }
+    send.setOnClickListener(new View.OnReceiveContentListener());
+
+    @Override
+    public void onClick(view view){
+        if(user.getText().toString().isEmpty() && !password.getText().)
+        toast.maketext(MainActivity.this, "correctos"),
+        //crea alarma
+        enviarPantallaDos();
+    }
+}
+private void enviarPantallaDos(){
+    //enviar los datos a la segunda pantalla
+    String pass = password.getText().toString();
+    Intent intent  = new Intent(this, PantallaDos.class);
+    intent.putExtra("password", pass);
+    startActivity(intent);
+    log.i("intent","" + pass);
 }
